@@ -1,0 +1,17 @@
+package string;
+
+public class Q5Vaild_shuffle {
+	public static boolean isValid(String  str1,String str2,String goal) {
+		if((str1+str2).length() == goal.length()) {
+			
+			
+			
+		return false;
+	}
+	public static void main(String [] agrs) {
+		String str1 = "xy";
+		String str2 = "ab";
+		String goal = "xayb";
+		isValid(str1,str2, goal);
+	}
+}

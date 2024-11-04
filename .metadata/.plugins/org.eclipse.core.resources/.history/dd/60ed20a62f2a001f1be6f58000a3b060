@@ -1,0 +1,29 @@
+package binaryTrees;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Q21CheckLeafNodesAtSameLevel {
+	static class TreeNode{
+		int val;
+		TreeNode left;
+		TreeNode right;
+		TreeNode(int val){
+			this.val= val;	
+		}
+	}
+	static class TreeNodeleaf{
+		int level ;
+		TreeNode node;
+		TreeNodeleaf(int level , TreeNode node){
+			this.node = node;
+			this.level = level;
+			
+		}
+	}
+	boolean checkifsomeLevel(TreeNode root) {
+		if(root==null) return true;
+		Queue<TreeNodeleaf> q = new LinkedList<>();
+		q.add(new TreeNodeleaf(0,root));
+	}
+}

@@ -1,0 +1,32 @@
+package regex;
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Validation {
+	
+	void isValidPattern(String str, String rex) {
+		Pattern pt = Pattern.compile(rex);
+		Matcher mt =pt.matcher(str);
+		boolean mc =mt.matches();
+		System.out.println(mc);
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter the regex pattern: ");
+		
+		String rex = sc.nextLine();
+		
+		System.out.print("Enter you name: ");
+		
+		String str = sc.nextLine();
+		
+		Validation vl = new Validation();
+		vl.isValidPattern(str, rex);
+
+	}
+
+}

@@ -1,0 +1,8 @@
+package pratice;
+
+public class bubbleSort {
+	public static void main(String[] args) {
+		int[] a = new int[] { 1, 45, 66, 656, 76, 2, 4, 6 };
+
+	}
+}

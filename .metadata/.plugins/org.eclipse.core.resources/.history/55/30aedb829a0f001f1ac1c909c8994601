@@ -1,0 +1,21 @@
+package MAY11;
+
+public class Rev {
+	
+	public static void arrReverse(int[] arr) {
+		int size = arr.length;
+		for(int i =0; i<size; i++ ) {
+			int temp = arr[i];
+			arr[i] = arr[size-1-i];
+			arr[size-1-i] = temp;
+		}
+		
+	}
+	public static void main(String [] args) {
+		int [] arr = {1,53,56,3,2,1,5};
+		Rev.arrReverse(arr);
+		for(int i:arr) {
+			System.out.print(i+" ");
+		}
+	}
+}

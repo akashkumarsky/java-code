@@ -1,0 +1,8 @@
+package java450;
+
+public class Q15Next_permutation {
+	public static void main(String [] args) {
+		int [] arr = {1,2,4};
+		
+	}
+}

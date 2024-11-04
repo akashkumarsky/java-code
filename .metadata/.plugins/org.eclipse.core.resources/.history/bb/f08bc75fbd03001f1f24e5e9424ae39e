@@ -1,0 +1,44 @@
+package linkedlist;
+
+public class Q9AddOneToLinkedList {
+	static class Node{
+		int val;
+		Node next;
+		Node(int val){
+			this.val = val;
+		}
+	}
+	static Node addOne(Node head) {
+		
+		Node reversehead = reverse(head);
+		Node current = reversehead;
+		int carry = 1;
+		while(current!=null) {
+			int sum = current.val+carry;
+			current.val = sum%10;
+			carry = sum/10;
+			current = current.next;
+		}
+		if(carry>0) {
+			Node newhead = new Node(1);
+			newhead.next = reversehead;
+			reversehead = newhead;
+		}
+		
+		return reverse(reversehead);
+	}
+	static Node reverse(Node head) {
+		Node previous = null;
+        Node current = head;
+        Node next;
+
+        while (current != null) {
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+
+        return previous;
+	}
+}

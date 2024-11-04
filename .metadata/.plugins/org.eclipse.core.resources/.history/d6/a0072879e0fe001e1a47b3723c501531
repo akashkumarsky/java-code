@@ -1,0 +1,22 @@
+package javaArrayMatrix;
+
+public class Q2Search_an_element {
+	static void search(int[][] mat,int size, int target) {
+		for(int i =0; i<size; i++) {
+			for(int j =0; j<size; j++) {
+				if(mat[i][j]==target) {
+					System.out.print("Element found at index [" + i+", "+j+"]");
+				}else {System.out.print("Element Not found!");}
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		int mat[][] = { { 10, 20, 30, 40 }, { 15, 25, 35, 45 }, { 27, 29, 37, 48 }, { 32, 33, 39, 50 } };
+
+		// Function call
+		search(mat, 4, 1);
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package linkedlist_implementation;
+
+public class linkedlistimplementation {
+	public static class Node{
+		int val;
+		Node next;
+		
+		Node(int val){
+			this.val = val;
+		}
+	}
+	public static class linkedlist{
+		Node head = null;
+		Node tail = null;
+		
+		void insertAtEnd (int val) {
+			Node temp = new Node(val);
+			if(head == null) {
+				head = temp;
+			}else {
+				tail.next =temp;
+			}
+			tail = temp;
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package string;
+
+public class Q1Reverse_the_String {
+	String strReverse(String str) {
+		char[] ch = str.toCharArray();
+		char[] c = str.length()-1;
+		for(int i =0 ; i<str.length()/2;i++) {
+			
+		}
+		return str;
+	}
+	public static void main(String args) {
+		String str = "akash";
+		strReverse(str);
+	}
+}

@@ -1,0 +1,19 @@
+package pratice;
+
+import java.util.Arrays;
+
+public class LongestCommonPrefix {
+	public String prefix(String strs) {
+		Arrays.sort(strs);
+		char[] start = strs[0].toCharArray();
+		char[] end = strs[strs.length - 1].toCharArray();
+
+	}
+
+	public static void main(String[] args) {
+		String[] strs = { "flower", "flow", "flight" };
+		LongestCommonPrefix lc = new LongestCommonPrefix();
+
+		lc.prefix(strs);
+	}
+}

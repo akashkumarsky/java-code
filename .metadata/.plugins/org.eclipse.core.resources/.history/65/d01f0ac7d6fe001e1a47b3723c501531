@@ -1,0 +1,40 @@
+package javaArrayMatrix;
+
+public class Q1java_Spiral_traversal {
+	static void spiralOrder(int size) {
+		int k[][] = new int[size][size];
+		int count = 0;
+		int round = -1;
+		char dir = 't';
+		for (int i = count; i < size * size; i++) {
+			switch (dir) {
+			case 'l': { 
+				round++;
+				k[left][i] = i;
+				if( count=size-1||k[count][round]!=0)dir ='r';
+						
+
+			}
+			case 'r': {
+
+			}
+			case 'b': {
+
+			}
+			case 't' : {
+				
+			}
+			default:
+				throw new IllegalArgumentException("Unexpected value: " + key);
+			}
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		// Function call
+		spiralOrder(6);
+	}
+
+}

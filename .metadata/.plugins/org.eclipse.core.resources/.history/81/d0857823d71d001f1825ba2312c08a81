@@ -1,0 +1,13 @@
+package pratice;
+
+public class Integertest {
+	public static void main(String [] args) {
+		
+		Integer a = -126;
+		Integer b = -126;
+		Integer c = 200;
+		Integer d = 200;
+		System.out.println(a==b);
+		System.out.println(c==d);
+	}
+}

@@ -1,0 +1,17 @@
+package java450;
+
+import java.util.ArrayList;
+
+public class Q22LongNumberFact {
+	static ArrayList<Integer> fact1(int n){
+		ArrayList<Integer> al = new ArrayList<>();
+		int listsize =0;
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

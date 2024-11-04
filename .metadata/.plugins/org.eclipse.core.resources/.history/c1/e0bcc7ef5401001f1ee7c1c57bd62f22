@@ -1,0 +1,64 @@
+package linkedlist;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public  class Q1linkedList {
+	Node head = null;
+
+	public static class Node {
+		int val;
+		Node next;
+
+		Node(int val) {
+			this.val = val;
+
+		}
+	}
+
+	public static void printlist(Node a) {
+		Node temp = a;
+		while (temp != null) {
+			System.out.print(temp.val + " ");
+			temp = temp.next;
+		}
+	}
+
+	public static void printlistrecursivly(Node a) {
+		if (a == null)
+			return;
+		printlistrecursivly(a.next);
+		System.out.print(a.val + " ");
+
+	}
+
+	public static void printItrative(Node head) {
+		Node temp = head;
+		Node prev = null;
+		while (temp != null) {
+			Node front = temp.next;
+			temp.next = prev;
+			prev = temp;
+			temp = front;
+		}
+		printlist(prev);
+
+	}
+
+	public static void main(String[] args) {
+		Q1linkedList ll = new Q1linkedList();
+		ll.head = new Node(10);
+		ll.head.next = new Node(12);
+		ll.head.next = new Node(34);
+
+		printlist(ll.head);
+		System.out.println();
+		printlistrecursivly(ll.head);
+		System.out.println();
+		printItrative(ll.head);
+		 Arrays.sort(null);
+		 Array
+
+	}
+
+}

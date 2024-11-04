@@ -1,0 +1,42 @@
+package linkedlist;
+
+public class Q8MovelastToFrontLL {
+	static class Node{
+		int val;
+		Node next;
+		Node(int val){
+			this.val = val;
+		}
+	}
+	static Node movelastToFront(Node head) {
+		Node temp = head;
+		Node front=temp.next;
+		Node last =null;
+		while(front.next != null) {
+			temp =temp.next;
+			front = front.next;
+		}
+		last = front;
+		last = front;
+		
+		//temp.next = null;
+		
+		return head;
+	}
+	static void printLinkedlist(Node head) {
+		Node temp =head;
+		while(temp!=null) {
+			System.out.print(temp.val+" ");
+			temp = temp.next;
+		}
+		System.out.println();
+	}
+	public static void main(String [] args) {
+		Node head = new Node(1);
+		head.next = new Node(2);
+		head.next.next = new Node(3);
+		head.next.next.next = new Node(4);
+		movelastToFront(head);
+		printLinkedlist(head);
+	}
+}

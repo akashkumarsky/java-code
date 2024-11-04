@@ -1,0 +1,14 @@
+package javaArrayMatrix;
+
+public class Q1java_Spiral_traversal {
+	static void spiralOrder(int size) {
+		
+	}
+	public static void main(String[] args) {
+		
+
+		// Function call
+		System.out.println(spiralOrder(6));
+	}
+
+}

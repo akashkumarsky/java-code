@@ -1,0 +1,22 @@
+package linkedlist;
+
+public class Q8MovelastToFrontLL {
+	static class Node{
+		int val;
+		Node next;
+		Node(int val){
+			this.val = val;
+		}
+	}
+	static Node movelastToFront(Node head) {
+		Node temp = head;
+		while(temp != null) {
+			temp =temp.next;
+		}
+		Node last = temp;
+		last.next = head;
+		head = last;
+		
+		return head;
+	}
+}

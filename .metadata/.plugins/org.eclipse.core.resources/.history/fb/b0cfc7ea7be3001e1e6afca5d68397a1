@@ -1,0 +1,15 @@
+package pratice22024March;
+
+public class factrorial {
+	public static int callfact(int a) {
+		int fact =1;
+		for(int i=a;i>0;i--) {
+			 fact =fact*i;
+		}
+		
+		return fact;
+	}
+	public static void main(String [] args) {
+		System.out.print(callfact(5));
+	}
+}

@@ -1,0 +1,10 @@
+package java450;
+
+public class Q30Minimum_swaps_required {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

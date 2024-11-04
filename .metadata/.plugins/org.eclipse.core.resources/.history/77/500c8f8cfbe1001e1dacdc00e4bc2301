@@ -1,0 +1,21 @@
+package java450;
+
+public class Q15Next_permutation {
+	public static void premutation(int [] arr) {
+		int size = arr.length;
+		int  pivot_k = size-2;
+		//cheak arr equal to null or size equal to 0;
+		if(arr==null || size == 0) return;
+		
+		// find pivot_k in arr
+		for(int i = size-1; i>0;i--) {
+			if(arr[i]>arr[i-1]) pivot_k--;;
+		}
+	}
+	
+	
+	public static void main(String [] args) {
+		int [] arr = {1,2,4};
+		
+	}
+}

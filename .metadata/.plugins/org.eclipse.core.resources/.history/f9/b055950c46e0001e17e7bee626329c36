@@ -1,0 +1,53 @@
+package java450;
+
+public class Q12Merge_two_sorted_Arrays {
+	public static void mergeSort(int[] arr1, int[] arr2, int n, int m) {
+		int[] arr3 = new int[n + m];
+		int left = 0;
+		int right = 0;
+		int index = 0;
+
+		while (left < n && right < m) {
+			if (arr1[left] >= arr2[right]) {
+				arr3[index++] = arr1[left++];
+			} else {
+				arr3[index++] = arr2[right++];
+			}
+		}
+
+		while (left < n) {
+			arr3[index++] = arr1[left++];
+		}
+
+		while (right < m) {
+			arr3[index++] = arr2[right];
+		}
+		for (int i = 0; i < n + m; i++) {
+			if (i < n) {
+				arr1[i] = arr3[i];
+			} else {
+				arr2[i-n] = arr3[i];
+			}
+		}
+
+	}
+
+	public static void main(String[] args) {
+		int[] arr1 = { 1, 3, 5, 6, 7 };
+		int[] arr2 = { 2, 4, 8, 73 };
+		int n = arr1.length ;
+		int m = arr2.length ;
+		mergeSort(arr1, arr2, n, m);
+		System.out.println("New sorted Arrays are");
+		System.out.print("arr1 = ");
+		for(int i : arr1) {
+			System.out.print(i+", ");
+		}
+		System.out.println();
+		System.out.print("arr2 = ");
+		for(int i : arr2) {
+			System.out.print(i+", ");
+		}
+	}
+
+}

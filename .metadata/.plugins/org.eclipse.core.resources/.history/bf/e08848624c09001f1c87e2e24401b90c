@@ -1,0 +1,24 @@
+package pratice;
+
+import java.util.Stack;
+
+public class ParathesesValidation {
+	public boolean validation(String str) {
+		Stack<Character>st = new Stack();
+		for(Character ch : str.toCharArray()) {
+			if(ch == '(') {
+				st.push(')');
+			}else if(ch=='{') {
+				st.push('}');
+			}else if(ch== '[') {
+				st.push(']');
+			}
+		}
+		
+	}
+	public static void main(String [] args) {
+		String str = "{([])}";
+		ParathesesValidation pv = new ParathesesValidation();
+		boolean and =pv.validation(str);
+	}
+}

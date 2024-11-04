@@ -1,0 +1,19 @@
+package regex;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Validation {
+	
+	void isValidPattern(String str, String rex) {
+		Pattern pt = Pattern.compile(rex);
+		Matcher mt =pt.matcher(str);
+		Matches mc =mt.matches();
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

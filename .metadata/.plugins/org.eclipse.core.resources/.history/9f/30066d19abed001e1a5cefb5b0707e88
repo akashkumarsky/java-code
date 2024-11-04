@@ -1,0 +1,26 @@
+package string;
+
+public class Q7LongestPalindromString {
+	static void longestPalindrom(String str) {
+		int start =0;int end =0;
+		int len1 = longest(str,i,i+1);
+		int len2 = longest(str,i,i);
+		int maxLen = Math.max(len1, len2);
+		
+	}
+	static int longest(String str , int i , int j) {
+		
+			while(i>=0 && j<str.length() && str.charAt(i)==str.charAt(j)) {
+				i++;j--;
+			}
+		retun j-i;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "abcdcba";
+		longestPalindrom(str);
+
+	}
+
+}

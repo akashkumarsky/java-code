@@ -1,0 +1,15 @@
+package javaArrayMatrix;
+
+public class Q1java_Spiral_traversal {
+	static void spiralOrder(int size) {
+		
+	public static void main(String[] args) {
+
+		int arr[] [] = {{1,2,3,4,5},{56,7,8,3,4}, {6,34,3,21,45}};
+				
+		
+		// Function call
+		spiralOrder(arr);
+	}
+
+}

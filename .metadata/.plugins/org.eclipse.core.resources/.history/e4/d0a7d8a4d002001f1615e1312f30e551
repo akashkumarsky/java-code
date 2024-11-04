@@ -1,0 +1,49 @@
+package linkedlist;
+
+public class Q4RemoveLoopOfLL {
+	static class Node{
+		int val;
+		Node next;
+		Node(int val){
+			this.val= val;
+		}
+	}
+	static boolean removeLoopLL(Node head) {
+		Node slow =head;
+		Node fast = head;
+		if(fast == null || fast.next == null) return false;
+		
+		while(fast!=null && fast.next != null) {
+			slow =slow.next;
+			fast =fast.next.next;
+			if(slow == fast) {
+				slow = head;
+				if(slow!=fast) {
+					slow = slow.next;
+					fast = fast.next;
+					if(slow.next == fast.next) {
+						fast.next = null;
+					}
+				}
+			}
+		}
+	}
+	public static void main(String [] args) {
+		Node head = new Node(1);
+		Node b = new Node(2);
+		Node c = new Node(3);
+		Node d = new Node(4);
+		Node e = new Node(5);
+		Node f = new Node(6);
+		
+		head.next = b;
+		b.next = c;
+		c.next = d;
+		d.next = e;
+		e.next = f;
+		f.next = c;
+		
+		removeLoopLL(head);
+		
+	}
+}

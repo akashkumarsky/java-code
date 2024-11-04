@@ -1,0 +1,11 @@
+package string;
+
+public class Q8LongestRepeatingSubsequence {
+
+	public static void main(String[] args) {
+		String str = "aabb";
+		int dp [][] = new int [][];
+
+	}
+
+}
